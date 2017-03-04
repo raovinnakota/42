@@ -6,7 +6,7 @@
 /*   By: rvinnako <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/17 03:06:55 by rvinnako          #+#    #+#             */
-/*   Updated: 2017/03/02 17:05:52 by rvinnako         ###   ########.fr       */
+/*   Updated: 2017/03/03 13:06:22 by rvinnako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,5 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n)
 		++s2;
 		s++;
 	}
-	return (*s1 - *s2);
+	return ((unsigned char)*s1 - (unsigned char)*s2);
 }

@@ -6,13 +6,13 @@
 /*   By: rvinnako <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/28 13:35:50 by rvinnako          #+#    #+#             */
-/*   Updated: 2017/03/02 17:56:32 by rvinnako         ###   ########.fr       */
+/*   Updated: 2017/03/03 17:03:45 by rvinnako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strcat(char *s1, char *s2)
+char	*ft_strcat(char *s1, const char *s2)
 {
 	int i;
 	int j;
@@ -21,7 +21,7 @@ char	*ft_strcat(char *s1, char *s2)
 	j = 0;
 	while (s1[i] != '\0')
 		i++;
-	while (j < ft_strlen(s2))
+	while (j < ft_strlen((char*)s2))
 	{
 		s1[i] = s2[j];
 		i++;

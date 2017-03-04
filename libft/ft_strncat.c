@@ -6,30 +6,22 @@
 /*   By: rvinnako <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/28 13:35:50 by rvinnako          #+#    #+#             */
-/*   Updated: 2017/03/02 18:38:25 by rvinnako         ###   ########.fr       */
+/*   Updated: 2017/03/03 17:06:03 by rvinnako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strncat(char *dest, char *src, size_t n)
+char	*ft_strncat(char *s1, const char *s2, size_t n)
 {
-	int i;
-	int j;
-	size_t s;
+	char	*orig;
 
-	i = 0;
-	j = 0;
-	s = 0;
-	while (dest[i] != '\0')
-		i++;
-	while (i < ft_strlen(src) && s <= n)
-	{
-		dest[i] = src[j];
-		i++;
-		j++;
-		s++;
-	}
-	dest[i] = '\0';
-	return (dest);
+	orig = s1;
+	while (*s1)
+		s1++;
+	n++;
+	while (*s2 && --n > 0)
+		*s1++ = *s2++;
+	*s1 = '\0';
+	return (orig);
 }

@@ -6,22 +6,23 @@
 /*   By: rvinnako <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/27 10:29:43 by rvinnako          #+#    #+#             */
-/*   Updated: 2017/03/02 15:51:22 by rvinnako         ###   ########.fr       */
+/*   Updated: 2017/03/03 17:37:43 by rvinnako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
-#include <string.h>
-#include <stdlib.h>
-#include <unistd.h>
+# include <string.h>
+# include <stdlib.h>
+# include <unistd.h>
 
 char	*ft_strcpy(char *dest, char *src);
 int		ft_strlen(char *str);
 char	*ft_strdup(const char *s1);
 char	*ft_strncpy(char *dest, char *src, size_t len);
-char	*ft_strcat(char *dest, char *src);
-char	*ft_strncat(char *dest, char *src, size_t n);
+char	*ft_strcat(char *s1, const char *s2);
+char	*ft_strncat(char *s1, const char *s2, size_t n);
+size_t	ft_strlcat(char *dst, const char *src, size_t size);
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
 int		ft_isalnum(int c);

@@ -1,23 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rvinnako <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/01/17 03:06:55 by rvinnako          #+#    #+#             */
-/*   Updated: 2017/03/03 13:05:17 by rvinnako         ###   ########.fr       */
+/*   Created: 2017/03/03 16:18:51 by rvinnako          #+#    #+#             */
+/*   Updated: 2017/03/03 16:30:23 by rvinnako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
 #include "libft.h"
 
-int		ft_strcmp(const char *s1, const char *s2)
+int		main(void)
 {
-	while (*s1 && (*s1 == *s2))
-	{
-		++s1;
-		++s2;
-	}
-	return ((unsigned char)*s1 - (unsigned char)*s2);
+	char *s1;
+	char *s2;
+
+	s1 = (char*)malloc(sizeof(*s1) * 10);
+	s1 = "my";
+	s2 = "hello";
+	printf("%s\n", ft_strncat(s1, s2, 4));
 }

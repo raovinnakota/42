@@ -6,7 +6,7 @@
 #    By: rvinnako <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/03/02 16:59:11 by rvinnako          #+#    #+#              #
-#    Updated: 2017/03/02 17:18:04 by rvinnako         ###   ########.fr        #
+#    Updated: 2017/03/03 16:30:51 by rvinnako         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ HEADER = libft.h
 
 all: $(NAME)
 
-$(NAME):
+$(NAME):	
 	gcc -Wall -Wextra -Werror -c $(SRC) -I $(HEADER)
 	ar rc $(NAME) *.o
 
