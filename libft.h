@@ -6,7 +6,7 @@
 /*   By: rvinnako <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/27 10:29:43 by rvinnako          #+#    #+#             */
-/*   Updated: 2017/03/05 18:25:50 by rvinnako         ###   ########.fr       */
+/*   Updated: 2017/03/05 19:03:17 by rvinnako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ void	*ft_memset(void *b, int c, size_t len);
 void	*ft_memcpy(void *dst, const void *src, size_t n);
 void	*ft_memccpy(void *dst, const void *src, int c, size_t n);
 void	*ft_memmove(void *dst, const void *src, size_t len);
+void	*ft_memchr(const void *s, int c, size_t n);
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
 
@@ -45,5 +46,6 @@ int		ft_tolower(int c);
 int		ft_atoi(char *str);
 int		ft_strcmp(const char *s1, const char *s2);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
+int		ft_memcpy(const void *s1, const void *s2, size_t n);
 
 #endif

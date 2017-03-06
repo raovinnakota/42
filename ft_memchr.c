@@ -1,37 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rvinnako <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/03/05 18:10:49 by rvinnako          #+#    #+#             */
-/*   Updated: 2017/03/05 18:43:24 by rvinnako         ###   ########.fr       */
+/*   Created: 2017/03/05 18:46:11 by rvinnako          #+#    #+#             */
+/*   Updated: 2017/03/05 18:59:14 by rvinnako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dst, const void *src, size_t len)
+void	*memchr(const void *s, int c, size_t n)
 {
-	const unsigned char	*memsrc;
-	unsigned char		*memdst;
-	unsigned char		*final;
+	unsigned char		ch;
+	const unsigned char	*mems;
 
-	memsrc = (const unsigned char*)src;
-	memdst = (unsigned char*)dst;
-	final = memdst;
-	if (memdst > memsrc)
+	ch = (unsigned char)(c);
+	mems = (unsigned char *)(s);
+	while (n > 0)
 	{
-		memsrc = memsrc + len - 1;
-		memdst = memdst + len - 1;
-		while (len-- > 0)
-			*memdst-- = *memsrc--;
+		if (*mems == ch)
+			return ((void *)(mems));
+		mems++;
+		n--;
 	}
-	else
-	{
-		while (len-- > 0)
-			*memdst++ = *memsrc++;
-	}
-	return (final);
+	return (NULL);
 }

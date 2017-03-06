@@ -1,37 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rvinnako <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/03/05 18:10:49 by rvinnako          #+#    #+#             */
-/*   Updated: 2017/03/05 18:43:24 by rvinnako         ###   ########.fr       */
+/*   Created: 2017/03/05 18:59:22 by rvinnako          #+#    #+#             */
+/*   Updated: 2017/03/05 19:02:16 by rvinnako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dst, const void *src, size_t len)
+int		memcmp(const void *s1, const void *s2, size_t n)
 {
-	const unsigned char	*memsrc;
-	unsigned char		*memdst;
-	unsigned char		*final;
+	const unsigned char *mem1;
+	const unsigned char *mem2;
 
-	memsrc = (const unsigned char*)src;
-	memdst = (unsigned char*)dst;
-	final = memdst;
-	if (memdst > memsrc)
+	mem1 = (const unsigned char *)(s1);
+	mem2 = (const unsigned char *)(s2);
+	while (n > 0)
 	{
-		memsrc = memsrc + len - 1;
-		memdst = memdst + len - 1;
-		while (len-- > 0)
-			*memdst-- = *memsrc--;
+		if (*mem1 != *mem2)
+			return ((unsigned char)(*mem1) - (unsigned char)(*mem2));
+		mem1++;
+		mem2++;
+		n--;
 	}
-	else
-	{
-		while (len-- > 0)
-			*memdst++ = *memsrc++;
-	}
-	return (final);
+	return (0);
 }
