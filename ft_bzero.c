@@ -6,13 +6,13 @@
 /*   By: rvinnako <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/05 17:11:23 by rvinnako          #+#    #+#             */
-/*   Updated: 2017/03/05 17:32:08 by rvinnako         ###   ########.fr       */
+/*   Updated: 2017/03/06 13:39:25 by rvinnako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
 	unsigned char *temp;
 

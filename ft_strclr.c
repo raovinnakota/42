@@ -1,37 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memccpy.c                                       :+:      :+:    :+:   */
+/*   ft_strclr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rvinnako <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/03/05 17:55:11 by rvinnako          #+#    #+#             */
-/*   Updated: 2017/03/06 15:03:53 by rvinnako         ###   ########.fr       */
+/*   Created: 2017/03/06 16:11:06 by rvinnako          #+#    #+#             */
+/*   Updated: 2017/03/06 16:21:39 by rvinnako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
+void	ft_strclr(char *s)
 {
-	unsigned char		*dest;
-	const unsigned char	*source;
-	unsigned char		ch;
-
-	dest = (unsigned char *)(dst);
-	source = (const unsigned char *)(src);
-	ch = (unsigned char)(c);
-	while (n > 0)
+	if (!s)
+		return ;
+	while (*s != '\0')
 	{
-		*dest = *source;
-		if (*source == ch)
-		{
-			dest++;
-			return ((void *)dest);
-		}
-		dest++;
-		source++;
-		n--;
+		*s = '\0';
+		s++;
 	}
-	return (0);
 }
