@@ -6,7 +6,7 @@
 /*   By: rvinnako <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/27 10:29:43 by rvinnako          #+#    #+#             */
-/*   Updated: 2017/03/06 16:40:52 by rvinnako         ###   ########.fr       */
+/*   Updated: 2017/03/07 12:15:25 by rvinnako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,11 @@ char	*ft_strnstr(const char *big, const char *little, size_t n);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
 char	*ft_strnew(size_t size);
+char	*ft_strmap(const char *s, char (*f)(char));
+char	*ft_strmapi(const char *s, char (*f)(unsigned int, char));
+char	*ft_strsub(const char *s, unsigned int start, size_t len);
+char	*ft_strjoin(const char *s1, const char *s2);
+char	*ft_strtrim(const char *s);
 
 void	ft_putchar(char c);
 void	ft_putstr(char *str);
@@ -63,5 +68,6 @@ int		ft_atoi(char *str);
 int		ft_strcmp(const char *s1, const char *s2);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
-
+int		ft_strequ(const char *s1, const char *s2);
+int		ft_strnequ(const char *s1, const char *s2, size_t n);
 #endif

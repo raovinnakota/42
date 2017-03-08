@@ -56,6 +56,13 @@ SRC = ft_strcpy.c \
 	  ft_strclr.c \
 	  ft_striter.c \
 	  ft_striteri.c\
+	  ft_strmap.c \
+	  ft_strmapi.c \
+	  ft_strequ.c \
+	  ft_strnequ.c \
+	  ft_strsub.c \
+	  ft_strjoin.c \
+	  ft_strtrim.c \
 
 .PHONY = all clean
 
