@@ -63,6 +63,7 @@ SRC = ft_strcpy.c \
 	  ft_strsub.c \
 	  ft_strjoin.c \
 	  ft_strtrim.c \
+	  ft_strsplit.c \
 
 .PHONY = all clean
 

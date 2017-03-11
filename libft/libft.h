@@ -15,6 +15,10 @@
 # include <string.h>
 # include <stdlib.h>
 # include <unistd.h>
+# define CHK(a, b) do{if(a){return(b);}}while(0)
+# define CHK1(a, b, c) do{if(a){b; return(c);}}while(0)
+
+char	**ft_strsplit(const char *s, char c);
 
 char	*ft_strcpy(char *dest, char *src);
 char	*ft_strdup(const char *s1);
@@ -70,4 +74,5 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 int		ft_strequ(const char *s1, const char *s2);
 int		ft_strnequ(const char *s1, const char *s2, size_t n);
+
 #endif
