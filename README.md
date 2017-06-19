@@ -18,3 +18,7 @@ which call a libft function. When compiling use the format `gcc <filename.c> <pa
 
 Functions
 ---------
+
+Name | Prototype | Library | Purpose | Method | Extra
+----   ---------   -------   -------   ------   -----
+ft_strcat | char	*ft_strcat(char *dest, char *src); | string.h | Concatenates the string from src to the the string in dest | Iterate through destination string until you find first empty character, and start copying contents of source string starting at the location of the first empty character. Make sure to mark the final character as empty, and return dest. | Make sure not to remalloc dest, will cause an error. Strcat assumes that the destination string has enough memory allocated to handle the total length of the two strings.
