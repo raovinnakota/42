@@ -21,4 +21,5 @@ Functions
 
 Name | Prototype | Library | Purpose | Method | Extra
 ---- | --------- | ------- | ------- | ------ | -----
-ft\_strcat | char	\*ft\_strcat(char \*dest, char \*src); | string.h | Concatenates the string from src to the the string in dest | Iterate through destination string until you find first empty character, and start copying contents of source string starting at the location of the first empty character. Make sure to mark the final character as empty, and return dest. | Make sure not to remalloc dest, will cause an error. Strcat assumes that the destination string has enough memory allocated to handle the total length of the two strings.
+ft\_strcat | char	\*ft\_strcat(char \*dest, char \*src); | string.h | 
+Concatenates the string from src to the the string in dest | Iterate through destination string until you find first empty character, and start copying contents of source string starting at the location of the first empty character. Make sure to mark the final character as empty, and return dest. | Make sure not to remalloc dest, will cause an error. Strcat assumes that the destination string has enough memory allocated to handle the total length of the two strings.
