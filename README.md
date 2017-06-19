@@ -3,7 +3,7 @@
 Introduction
 ------------
 
-Libft is the first projects that new cadets are asked to complete at 42. Part of the 42 philosophy is understanding through
+Libft is the first project that new cadets are asked to complete at 42. Part of the 42 philosophy is understanding through
 recreation. So, rather than use libc and stdlib functions, we recreate them. It's also intended to be continually expanded as 
 we attempt more projects. As the library gets expanded this repo will updated to reflect that.
 
