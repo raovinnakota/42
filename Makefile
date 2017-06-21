@@ -73,6 +73,8 @@ SRC = ft_strcpy.c \
 	  ft_lstmap.c \
 	  ft_lstlast.c \
 	  ft_lstsize.c \
+	  ft_arrjoin.c \
+	  ft_strndup.c \
 
 .PHONY = all clean
 

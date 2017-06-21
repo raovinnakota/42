@@ -47,6 +47,8 @@ char				*ft_strsub(const char *s, unsigned int start, size_t len);
 char				*ft_strjoin(const char *s1, const char *s2);
 char				*ft_strtrim(const char *s);
 char				*ft_itoa(int n);
+char				*ft_strndup(const char *str, size_t size);
+char				*ft_arrjoin(char **arr);
 
 void				ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));
