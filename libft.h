@@ -12,6 +12,7 @@
 
 #ifndef LIBFT_H
 # define LIBFT_H
+# include "get_next_line.h"
 # include <string.h>
 # include <stdlib.h>
 # include <unistd.h>
@@ -93,4 +94,5 @@ int					ft_memcmp(const void *s1, const void *s2, size_t n);
 int					ft_strequ(const char *s1, const char *s2);
 int					ft_strnequ(const char *s1, const char *s2, size_t n);
 int					ft_lstsize(t_list *begin_list);
+int					get_next_line(const int fd, char **line);
 #endif
