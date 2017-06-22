@@ -15,9 +15,10 @@ Using the library involves several steps. First, you must add `#include "libft.h
 Functions
 ---------
 
-Name | Prototype | Library/Header | Purpose | Method | Extra
----- | --------- | ------- | ------- | ------ | -----
-ft\_strlen | size\_t	ft\_strlen(char \*str); | libc/string.h | Returns an unsigned integer that contains the size of a string | Iterate through the string and increment a counter. Return the counter | To use size\_t, you'll need to include string.h
-ft\_strdup | char	\*ft\_strdup(const char \*str); | libc/string.h | Allocates the memory and copies the content of input string | Use ft\_strlen to find out the length of the input string, use malloc with that length, and transfer the contents of input string. | Make sure to protect the function in case the malloc fails
-ft\_strcat | char	\*ft\_strcat(char \*dest, char \*src); | libc/string.h | Concatenates the string from src to the the string in dest | Iterate through destination string until you find first empty character, and start copying contents of source string starting at the location of the first empty character. Make sure to mark the final character as empty, and return dest. | Make sure not to remalloc dest, will cause an error. Strcat assumes that the destination string has enough memory allocated to handle the total length of the two strings.
-ft\_strncat | char	\*ft\_strncat(char \*dest, char \*src, size\_t size); | libc/string.h | Concatenates a "size" number of bytes from the source string to the destination string, if the size > string length, the extra bytes are empty strings. | When copying the source string to the destination string, make sure to keep a count of the number of bytes transferred. | On the off chance that the size is greater than the string length of src, the rest of the memory allocated is filled with empty strings. 
+Name | Prototype | Library/Header | Purpose
+---- | --------- | -------------- | ------- 
+`ft_strlen` | `size_t    ft_strlen(char *str);` | `libc/string.h` | Returns an unsigned integer that contains the size of a string | Iterate through the string and increment a counter. Return the counter, will need to include `string.h` to use `size_t`
+`ft_strcpy` | `char *ft_strcpy(char *dest, const char *src);` | `libc/string.h` | Copies the entirety of src, including the null-terminating byte to the buffer pointed to by dest. The buffer should have the correct amount of memory allocated
+`ft_strdup` | `char ft_strdup(const char *str);` | `libc/string.h` |Allocates enough memory to hold the input string, and copies the contents of input string to newly allocated string. Returns the allocated string.
+`ft_strcat` | `char *ft_strcat(char *dest, char *src);` | `libc/string.h` | Copies the contents of the source string to the destination string, starting at the first instance of a null terminated byte. Assumes that the destination string has enough memory allocated to hold the source string.
+`ft_strncat` | `char *ft_strncat(char *dest, char *src, size_t size);` | `libc/string.h` | Concatenates a finite number of bytes, determined by the input size from the source string to the destination string. If the size > string length, the extra bytes are filled with `'\0'` bytes. 
