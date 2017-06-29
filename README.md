@@ -10,7 +10,7 @@ Usage
 
 Clone the repo and use `make all` to create the library. To keep the library and remove the object files, use `make clean`. To reset the repo to it's previous state entirely use `make fclean`.
 
-Using the library involves several steps. First, you must add `#include "libft.h"` either to your header file, or all files which call a libft function. When compiling use the format `gcc <filename.c> <path>/libft.a` to compile successfully.
+Using the library involves several steps. First, you must add `#include "libft.h"` either to your header file, or all files which call a libft function. When compiling, use the format `gcc <filename.c> <path>/libft.a`.
 
 Functions
 ---------
