@@ -16,7 +16,14 @@ Functions
 ---------
 
 Name | Prototype | Library/Header | Purpose
----- | --------- | -------------- | ------- 
+---- | --------- | -------------- | -------
+`ft_bzero` | `void ft_bzero(char *str, size_t size)` | `libc/string.h` | Replaces a `size_t` number of bytes in `str` with the `'\0'` byte.
+`ft_memset` | `void *ft_memset(void *b, int c, size_t len)` | `libc/string.h` | Fills `len` bytes in the `b` with `c`.
+`ft_memcpy` | `void *ft_memcpy(void *dst, void *src, size_t len)` | `libc/string.h` | Copies `len` bytes of memory from the `src` to `dst`. Assumes that `dst` has memory already allocated.
+`ft_memccpy` | `void *ft_memccpy(void *dst, const void *src, int c, size_t len)` | `libc/string.h` | Coplies `len` bytes of memory from `src` to `dst`. The function returns a pointer to the first character after `c` in `dst` or null if `c` doesn't exist in `dst`.
+`ft_memmove` | `void *ft_memmove(void *dst, const void *src, size_t len)` | `libc/string.h` | Copies `len` bytes from `src` to `dst` while making sure that they don't overlap.
+`ft_memchr` | `void *ft_memchr(void *s, int c, size_t len)` | `libc/string.h` | Scans the first `len` bytes of `s` for the first occurrence of `c`. Returns a pointer a pointer to that first occurrence. 
+`ft_memcmp` | `int ft_memcmp(const void *s1, const void *s2, size_t len)` | `libc/string.h` | Compares the first `len` bytes of both `s1` and `s2`. If `s1 < s2`, returns a negative integer. If `s1 > s2`, returns a positive integer. If `s1 == s2`, returns zero.
 `ft_strlen` | `size_t    ft_strlen(char *str);` | `libc/string.h` | Returns an unsigned integer that contains the size of a string | Iterate through the string and increment a counter. Return the counter, will need to include `string.h` to use `size_t`
 `ft_strcpy` | `char *ft_strcpy(char *dest, const char *src);` | `libc/string.h` | Copies the entirety of src, including the null-terminating byte to the buffer pointed to by dest. The buffer should have the correct amount of memory allocated
 `ft_strdup` | `char *ft_strdup(const char *str);` | `libc/string.h` | Allocates enough memory to hold the input string, and copies the contents of input string to newly allocated string. Returns the allocated string.
