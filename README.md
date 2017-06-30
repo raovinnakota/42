@@ -38,7 +38,7 @@ Name | Prototype | Library/Header | Purpose
 `ft_strncmp` | `int ft_strncmp(const char *s1, const char *s2, size_t len)` | `libc/string.h` | Compares only the first `len` bytes of both strings. The return values are the same as `ft_strcmp`
 `ft_atoi` | `int ft_atoi(char *str)` | `libc/string.h` | Converts the input string to an integer, and returns the integer. 
 `isalpha` | `int ft_isalpha(int c)` | `libc/string.h` | Returns `1` if input is a character in the alphabet (both cases), else will retun `0`
-`isdigit` | `int ft_isdigit(int c)` | `libc/string.h` | Returns `1` if input is a digit between `0-9`, else returns `0`.
-`isalnum` | `int ft_isalnum(int c)` | `libc/string.h` | Returns `1` if and only if `((ft_isalpha(c) == 1) || (ft_isdigit(c) == 1))`, else returns `0`.
-`isascii` | `int ft_isascii(int c)` | `libc/string.h` | Returns `1` if `c` has a corresponding ascii character, else returns `0`.
-`isprint` | `int ft_isprint(int c)` | `libc/string.h` | Returns `1` if `c` is a printable ascii character, else returns `0`
+`ft_isdigit` | `int ft_isdigit(int c)` | `libc/string.h` | Returns `1` if input is a digit between `0-9`, else returns `0`.
+`ft_isalnum` | `int ft_isalnum(int c)` | `libc/string.h` | Returns `1` if and only if `((ft_isalpha(c) == 1) || (ft_isdigit(c) == 1))`, else returns `0`.
+`ft_isascii` | `int ft_isascii(int c)` | `libc/string.h` | Returns `1` if `c` has a corresponding ascii character, else returns `0`.
+`ft_isprint` | `int ft_isprint(int c)` | `libc/string.h` | Returns `1` if `c` is a printable ascii character, else returns `0`
