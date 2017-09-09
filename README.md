@@ -16,6 +16,6 @@ Functions
 ---------
 A full list of the original 50 functions for libft can be found [here](https://cdn.intra.42.fr/pdf/pdf/775/libft.en.pdf)
 
-##Get Next Line
+## Get Next Line
 Included in the latest iteration of libft is the function get_next_line. It's useful for reading the contents of text files. More information can be found [here](https://github.com/raovinnakota/get_next_line).
 
